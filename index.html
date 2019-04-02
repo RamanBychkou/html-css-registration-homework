@@ -4,22 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
     <title>Document</title>
 </head>
-<body>
+<body class="body">
   <div class="wrapper">
-    <div class="title">
-      <h2>SIGN IN</h2>
-      <h2>SIGN UP</h2>
+    <div class="form-container">
+      <input type="radio" id="sign_In" name="sign" class="form-container__sign_in" checked>
+      <input type="radio" id="sign_up" name="sign" class="form-container__sign_up">
+      <div class="form-container__control">
+         <label for="sign_In" class="form__sign_in">SIGN IN</label>
+         <label for="sign_up"  class="form__sign_up">SIGN UP</label>
+      </div>
+      <div class="forms">
+          <div class="searh-form-login">
+              <form action="https://reqres.in/api/login" method="POST" class="search-form">
+                <input type="tel" name="phone" placeholder="Mobile Phone"class="search-form__input">
+                <input type="email" name="email" required placeholder="Email ID"class="search-form__input">
+                <input type="password" name="password" required placeholder="Password"class="search-form__input search-form__input_password">
+                <div class="search-form__terms">
+                  <input type="checkbox" name="terms" required class="search-form__input_terms" id="terms-login">
+                  <label for="terms-login" class="search-form__terms_label">I agree to terms and conditions</label>
+                </div>
+                <button type="submit" class="search-form__button">LOGIN</button>
+              </form>  
+            </div>
+            <div class="searh-form-register">
+              <form action="https://reqres.in/api/register" method="POST" class="search-form">
+                <input type="tel" name="phone" required placeholder="Mobile Phone"class="search-form__input">
+                <input type="email" name="email" required placeholder="Email ID"class="search-form__input">
+                <input type="password" name="password" required placeholder="Password"class="search-form__input search-form__input_password">
+                <div class="search-form__terms">
+                  <input type="checkbox" name="terms" required class="search-form__input_terms" id="terms-register">
+                  <label for="terms-register" class="search-form__terms_label">I agree to terms and conditions</label>
+                </div>
+                <button type="submit" class="search-form__button">REGISTER</button>
+              </form>   
+            </div>
+      </div>
     </div>
-    <form action="https://reqres.in/api/register" method="POST" class="search-form">
-      <input type="tel" name="phone" required placeholder="Mobil Phone"class="search-form__input">
-      <input type="email" name="email" required placeholder="Email Id"class="search-form__input">
-      <input type="password" name="password" required placeholder="Password"class="search-form__input">
-      <input type="checkbox" name="terms" requiredclass="search-form__input">
-      <label for="terms">I agree to terms and conditions</label>
-      <button type="submit" class="search-form__button">REGISTER</button>
-    </form>
   </div>
 </body>
 </html>
