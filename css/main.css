@@ -1,0 +1,119 @@
+@import './reset.css';
+.body {
+  background-image: url('../img/bg-body.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Proxima Nova', sans-serif;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.form-container {
+  width: 25rem;
+  margin: 0 auto;
+  background-color: #181e28;
+  opacity: 0.79;
+  color: #fff;
+  padding: 0 14px;
+  min-height: 34rem;
+  font-size: 22px;
+  box-shadow: -4.794px 54.791px 71px rgba(0,0,0,0.58);
+}
+/* tabs  */
+.form-container__control {
+  padding: 2.7rem 1.8rem;
+  font-size: 1.3rem;
+}
+.form__sign_in {
+  margin-right: 2.2rem;
+}
+.form-container__sign_in:checked ~ .form-container__control .form__sign_in, .form-container__sign_up:checked ~ .form-container__control .form__sign_up {
+  border-bottom: 3px solid #ffab1a;
+}
+.form__sign_in, .form__sign_up {
+  padding-bottom: 0.4rem;
+}
+.form-container__sign_in, .form-container__sign_up, .form-container__sign_in:not(:checked) ~ .forms .searh-form-register, .form-container__sign_up:not(:checked) ~ .forms .searh-form-login {
+  display: none;
+}
+.form-container__sign_in:checked ~ .forms .searh-form-register, .form-container__sign_up:checked ~ .forms .searh-form-login {
+  display: block;
+}
+.forms {
+  padding-top: 2.6rem;
+}
+/* end tabs */
+/* search form */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+  padding: 0 1.2rem;
+}
+.search-form__input {
+  border: none;
+  background: none;
+  border-bottom: 2px solid #949597;
+  width: 94%;
+  font-size: 1rem;
+  margin-bottom: 4rem;
+  padding-left: 0.2rem;
+  letter-spacing: 0.06rem;;
+}
+.search-form__input, .search-form__input::placeholder {
+  color: #fff;
+  padding-bottom: 0.26rem;
+}
+.search-form__input_password {
+  margin-bottom: 2.7rem;
+}
+.search-form__terms {
+  display: flex;
+  justify-content: flex-start;
+  width: 94%;
+  padding: 0.2rem 0 2.5rem;
+  font-size: 1rem;
+}
+
+ .search-form__input_terms {
+   display: none;
+}
+.search-form__terms_label {
+  position: relative;
+  margin: 0 0 0 1rem;
+}
+.search-form__input_terms + .search-form__terms_label:before {
+    content: "\2713";
+    color: transparent;
+    display: inline-block;
+    border: none;
+    background: #2159a7;
+    font-size: 0.8rem;    
+    height: 15px;
+    width: 14px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+    position: absolute;
+    top: 2px;
+    left: -20px;
+}
+.search-form__input_terms:checked + .search-form__terms_label:before {
+    color: #fff;
+}
+
+.search-form__button {
+  border-radius: 250px;
+    background-color: #f47e16;
+    border: none;
+    color: #fff;
+    width: 12rem;
+    padding: 0.5rem 0;
+    font-weight: 700;
+    font-size: 1rem;
+}
+/*end search form */
