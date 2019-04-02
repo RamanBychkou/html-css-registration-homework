@@ -105,7 +105,10 @@
 .search-form__input_terms:checked + .search-form__terms_label:before {
     color: #fff;
 }
-
+.search-form__input, .search-form__button {
+  outline: none;
+  user-select: none;
+}
 .search-form__button {
   border-radius: 250px;
     background-color: #f47e16;
@@ -117,3 +120,6 @@
     font-size: 1rem;
 }
 /*end search form */
+@media (max-width: 500px) {
+
+}
