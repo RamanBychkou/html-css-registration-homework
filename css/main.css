@@ -18,7 +18,6 @@
   opacity: 0.79;
   color: #fff;
   padding: 0 14px;
-  min-height: 34rem;
   font-size: 22px;
   box-shadow: -4.794px 54.791px 71px rgba(0,0,0,0.58);
 }
@@ -36,10 +35,10 @@
 .form__sign_in, .form__sign_up {
   padding-bottom: 0.4rem;
 }
-.form-container__sign_in, .form-container__sign_up, .form-container__sign_in:not(:checked) ~ .forms .searh-form-register, .form-container__sign_up:not(:checked) ~ .forms .searh-form-login {
+.form-container__sign_in, .form-container__sign_up, .form-container__sign_in:not(:checked) ~ .forms .searh-form-login, .form-container__sign_up:not(:checked) ~ .forms .searh-form-register {
   display: none;
 }
-.form-container__sign_in:checked ~ .forms .searh-form-register, .form-container__sign_up:checked ~ .forms .searh-form-login {
+.form-container__sign_in:checked ~ .forms .searh-form-login, .form-container__sign_up:checked ~ .forms .searh-form-register {
   display: block;
 }
 .forms {
@@ -118,6 +117,7 @@
     padding: 0.5rem 0;
     font-weight: 800;
     font-size: 1rem;
+    margin-bottom: 3.3rem;
 }
 /*end search form */
 @media (max-width: 500px) {
